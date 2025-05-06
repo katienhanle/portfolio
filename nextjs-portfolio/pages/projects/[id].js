@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import Image from 'next/image';
+
 
 
 export default function ProjectPage() {
@@ -65,7 +67,7 @@ export default function ProjectPage() {
             <div style={{ marginBottom: '2rem' }}>
               <h3 style={{ fontWeight: 'bold' }}>TLDR:</h3>
               <p>
-                Our project aimed to identify and address common user errors within Apple's iMessage app. 
+                Our project aimed to identify and address common user errors within Apple&rsquo;s iMessage app. 
                 By conducting interviews with 18 university students, we pinpointed issues such as the 
                 discoverability of recently deleted messages, confusion between dictation and voice memo 
                 functions, and inconsistent gesture actions. Our redesigned features included improved 
@@ -84,10 +86,12 @@ export default function ProjectPage() {
 
           {/* Image */}
           <div style={{ justifySelf: 'start' }}>
-            <img
-              src="/phonedisplay.png"
-              alt="iMessage Project"
-              style={{ width: '100%', maxWidth: '360px', borderRadius: '1rem' }}
+          <Image
+            src="/phonedisplay.png"
+            alt="iMessage Project"
+            width={360}
+            height={720} // Adjust this to match your image’s real aspect ratio
+            style={{ width: '100%', maxWidth: '360px', borderRadius: '1rem', height: 'auto' }}
             />
           </div>
         </div>

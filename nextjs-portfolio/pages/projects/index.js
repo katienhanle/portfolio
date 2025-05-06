@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 export default function ProjectsPage() {
   return (
@@ -73,11 +75,13 @@ export default function ProjectsPage() {
                   Redesigned iMessage to improve feature discoverability and create a more intuitive user experience.
                 </p>
               </div>
-              <img
+              <Image
                 src="/phonedisplay.png"
                 alt="iMessage Project"
-                style={{ borderRadius: '1rem', width: '100%' }}
-              />
+                width={600}
+                height={600}
+                style={{ width: '100%', height: 'auto', borderRadius: '1rem' }}
+            />
             </div>
           </Link>
 

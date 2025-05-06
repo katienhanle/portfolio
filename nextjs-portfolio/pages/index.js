@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
+import Link from 'next/link';
+
 
 
 export default function Home() {
@@ -48,18 +50,18 @@ export default function Home() {
           <hr style={{ margin: '2rem 0', borderColor: 'rgba(255, 255, 255, 0.3)' }} />
         </div>
         <div>
-          <img
-            src="/headshot.png"
-            alt="Katie Headshot"
-            style={{
-              width: '250px',
-              height: '250px',
-              borderRadius: '100%',
-              objectFit: 'cover',
-              objectPosition: 'center',
-              boxShadow: '0 0 25px rgba(255,255,255,0.25)'
-            }}
-          />
+        <Image
+          src="/headshot.png"
+          alt="Katie Headshot"
+          width={250}
+          height={250}
+          style={{
+            borderRadius: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            boxShadow: '0 0 25px rgba(255,255,255,0.25)'
+          }}
+        />
         </div>
       </section>
 
@@ -68,11 +70,13 @@ export default function Home() {
         <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>Recent Work</h2>
         <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
         <div style={{ flex: '1 1 450px' }}>
-          <img
-            src="/phonedisplay.png"
-            alt="iMessage Project"
-            style={{ width: '100%', height: 'auto', borderRadius: '1rem'}}
-          />
+        <Image
+          src="/phonedisplay.png"
+          alt="iMessage Project"
+          width={600} // or your preferred width
+          height={600} // maintain aspect ratio with height: 'auto' in style
+          style={{ width: '100%', height: 'auto', borderRadius: '1rem' }}
+        />
         </div>
           <div style={{ flex: '2 1 500px' }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>iMessage Interface Revamp</h3>
@@ -88,9 +92,11 @@ export default function Home() {
               <li>Strategized and coordinated team efforts, delegating tasks efficiently and ensuring timely progress meetings.</li>
               <li>Implemented user-centered design principles to optimize feature visibility and accessibility within the iMessage platform.</li>
             </ul>
-            <a className="ghost-button" href="/projects/imessage">
-              View Project →
-            </a>
+            <Link href="/projects/imessage" passHref>
+              <a className="ghost-button">
+                View Project →
+              </a>
+            </Link>
 
 
           </div>
@@ -115,14 +121,22 @@ export default function Home() {
 
           {/* Contact */}
           <div>
-            <p style={{ fontWeight: '500', marginBottom: '0.5rem' }}>Let’s Connect ⇄</p>
+          <p style={{ fontWeight: '500', marginBottom: '0.5rem' }}>Let&rsquo;s Connect ⇄</p>
             <p>
-              <a href="mailto:katienhanle@gmail.com" style={{ color: 'white', textDecoration: 'none' }}>
+              <a
+                href="mailto:katienhanle@gmail.com"
+                style={{ color: 'white', textDecoration: 'none' }}
+              >
                 📧 katienhanle@gmail.com
               </a>
             </p>
             <p>
-              <a href="https://linkedin.com/in/katienhanle/" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>
+              <a
+                href="https://linkedin.com/in/katienhanle/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'white', textDecoration: 'none' }}
+              >
                 🌐 linkedin.com/in/katienhanle/
               </a>
             </p>
