@@ -122,7 +122,7 @@ export default function Home() {
 
           {/* Contact */}
           <div>
-          <p style={{ fontWeight: '500', marginBottom: '0.5rem' }}>Let&rsquo;s Connect ⇄</p>
+          <p style={{ fontWeight: '500', marginBottom: '0.5rem' }}>Let&apos;s Connect ⇄</p>
             <p>
               <a
                 href="mailto:katienhanle@gmail.com"
