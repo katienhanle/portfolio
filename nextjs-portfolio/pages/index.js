@@ -68,6 +68,7 @@ export default function Home() {
       {/* Projects */}
       <section style={{ marginTop: '4rem' }}>
         <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>Recent Work</h2>
+
         <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
         <div style={{ flex: '1 1 450px' }}>
         <Image
@@ -101,6 +102,38 @@ export default function Home() {
 
           </div>
         </div>
+        <div style={{ display: 'flex', gap: '2rem', marginTop: '4rem', flexWrap: 'wrap' }}>
+        <div style={{ flex: '1 1 450px' }}>
+          <Image
+            src="/careercrushdisplay.png" // replace with your actual image path
+            alt="Career Crush Project"
+            width={600}
+            height={600}
+            style={{ width: '100%', height: 'auto', borderRadius: '1rem' }}
+          />
+        </div>
+        <div style={{ flex: '2 1 500px' }}>
+          <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Career Crush: A Swipe-Based Internship Matching App</h3>
+          <p style={{ fontStyle: 'italic', marginBottom: '1rem' }}>UX Research · Product Design</p>
+          <ul style={{
+            listStyleType: 'disc',
+            paddingLeft: '1.5rem',
+            lineHeight: '1.7',
+            marginTop: '1rem',
+            color: 'white'
+          }}>
+            <li>Designed a swipe-based mobile platform to streamline internship discovery and reduce application fatigue.</li>
+            <li>Addressed key frustrations from job seekers and recruiters uncovered through surveys and heuristic evaluations.</li>
+            <li>Implemented features like universal profile, swipe cards, and recruiter messaging to personalize and simplify the experience.</li>
+          </ul>
+          <Link href="/projects/careercrush" passHref>
+            <a className="ghost-button">
+              View Project →
+            </a>
+          </Link>
+        </div>
+      </div>
+
       </section>
       <footer style={{ marginTop: '6rem', paddingTop: '4rem', borderTop: '1px solid rgba(255,255,255,0.2)', color: 'white' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
