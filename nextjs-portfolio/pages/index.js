@@ -93,10 +93,8 @@ export default function Home() {
               <li>Strategized and coordinated team efforts, delegating tasks efficiently and ensuring timely progress meetings.</li>
               <li>Implemented user-centered design principles to optimize feature visibility and accessibility within the iMessage platform.</li>
             </ul>
-            <Link href="/projects/imessage" passHref>
-              <a className="ghost-button">
-                View Project →
-              </a>
+            <Link href="/projects/imessage" className="ghost-button">
+              View Project →
             </Link>
 
 
@@ -126,11 +124,10 @@ export default function Home() {
             <li>Addressed key frustrations from job seekers and recruiters uncovered through surveys and heuristic evaluations.</li>
             <li>Implemented features like universal profile, swipe cards, and recruiter messaging to personalize and simplify the experience.</li>
           </ul>
-          <Link href="/projects/careercrush" passHref>
-            <a className="ghost-button">
-              View Project →
-            </a>
+          <Link href="/projects/careercrush" className="ghost-button">
+            View Project →
           </Link>
+
         </div>
       </div>
 

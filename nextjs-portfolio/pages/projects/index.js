@@ -2,7 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 
+
 export default function ProjectsPage() {
+  
   return (
     <div style={{ background: 'linear-gradient(to bottom, #A9BCD0, #373F51)', color: 'white', minHeight: '100vh', padding: '2rem' }}>
 
@@ -25,7 +27,14 @@ export default function ProjectsPage() {
               onMouseEnter={(e) => {
                 const underline = document.createElement('div');
                 underline.className = 'underline';
+                underline.style.position = 'absolute';
+                underline.style.bottom = '0';
+                underline.style.left = '0';
+                underline.style.height = '2px';
+                underline.style.width = '100%';
+                underline.style.backgroundColor = '#ffffff'; // ← brighter white underline
                 e.currentTarget.appendChild(underline);
+                            
               }}
               onMouseLeave={(e) => {
                 const underline = e.currentTarget.querySelector('.underline');
@@ -85,7 +94,41 @@ export default function ProjectsPage() {
             </div>
           </Link>
 
-          {/* Middle Column Empty */}
+          {/* Middle Column Project Card */}
+          <Link href="/projects/careercrush" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                borderRadius: '1rem',
+                padding: '2rem',
+                boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1rem',
+                alignItems: 'center',
+                transition: 'transform 0.2s',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+            >
+              <div>
+                <h2 style={{ margin: 0, fontSize: '1.75rem' }}>Career Crush</h2>
+                <p style={{ color: '#124157', margin: 0, fontStyle: 'italic' }}>UX Research · Product Design</p>
+                <p style={{ marginBottom: '1rem' }}>
+                  A swipe-based internship/job platform that simplifies the application process for students and recruiters.
+                </p>
+              </div>
+              <Image
+                src="/careercrushdisplay.png"
+                alt="Career Crush Project"
+                width={600}
+                height={600}
+                style={{ width: '100%', height: 'auto', borderRadius: '1rem' }}
+              />
+            </div>
+          </Link>
+
           <div></div>
 
           {/* Right Column Empty */}

@@ -10,8 +10,7 @@ export default function ProjectPage() {
 
   return (
     <div style={{
-        background: 'linear-gradient(to top, #373F51, #A9BCD0)',
-        backgroundAttachment: 'fixed',
+        background: 'linear-gradient(to bottom, #373F51, #373F51, #565a73,rgb(112, 136, 162))',
         color: 'white',
         minHeight: '100vh',
         padding: '2rem'
