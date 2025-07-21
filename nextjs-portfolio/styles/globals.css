@@ -62,3 +62,14 @@ a .underline {
   background-color: white;
   color: #373F51;
 }
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
