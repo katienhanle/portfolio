@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 
 
@@ -74,27 +75,27 @@ export default function Home() {
       <section style={{ marginTop: '4rem' }}>
 
         <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => {
-                setActiveTab(tab);
-                setFadeKey(prev => prev + 1); // forces re-mount to retrigger animation
-              }}              
-              style={{
-                padding: '0.5rem 1.25rem',
-                borderRadius: '999px',
-                border: activeTab === tab ? '2px solid white' : '1px solid rgba(255,255,255,0.4)',
-                background: activeTab === tab ? '#ffffff22' : 'transparent',
-                color: 'white',
-                fontWeight: activeTab === tab ? 'bold' : 'normal',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease'
-              }}
-            >
-              {tab}
-            </button>
-          ))}
+        {tabs.map((tab) => (
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+            key={tab}
+            onClick={() => setActiveTab(tab)}
+            style={{
+              padding: '0.5rem 1.25rem',
+              borderRadius: '999px',
+              border: activeTab === tab ? '2px solid white' : '1px solid rgba(255,255,255,0.4)',
+              background: activeTab === tab ? '#ffffff22' : 'transparent',
+              color: 'white',
+              fontWeight: activeTab === tab ? 'bold' : 'normal',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease'
+            }}
+          >
+            {tab}
+          </motion.button>
+        ))}
+
         </div>
 
 
