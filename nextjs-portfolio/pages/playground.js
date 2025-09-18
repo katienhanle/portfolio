@@ -111,9 +111,9 @@ export default function Playground() {
       desc: (
         <>
           In high school, I designed a collective poster for the{' '}
-          <strong>Operation Smile Student Program</strong>’s fundraiser event
+          <strong>Operation Smile Student Program</strong>&apos;s fundraiser event
           <em> Dance for Smiles</em>. The poster helped to promote a series of cultural
-          dance workshops hosted by four of our high school's organizations,
+          dance workshops hosted by four of our high school&apos;s organizations,
           proceeds supporting cleft lip surgeries in developing countries. The graphic was shared
           across multiple clubs and social media channels.
         </>

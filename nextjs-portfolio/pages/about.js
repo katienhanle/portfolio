@@ -124,8 +124,17 @@ export default function About() {
           <p style={styles.body}>
             I enjoy listening to music, and I&apos;ve been invited to travel, perform on stage, and even judge
             competitions—experiences that continue to shape both my artistry and my perspective as a creative.
+            Some of my favorite artists include fromis_9, TWICE, aespa, and tlinh.
           </p>
-          <p style={styles.body}>Some of my favorite artists include fromis_9, TWICE, aespa, and tlinh.</p>
+          <p style={styles.body}>
+            I also love playing video games, especially FPS and interactive/narrative horror games 
+          like Valorant and Until Dawn (even if I'm bad with horror).
+          </p>
+          <p style={styles.body}>
+            I&apos;d say one of my favorite hobbies is simply “meeting people.” I enjoy learning about
+            others and discovering new ways of looking at the world. If you&apos;re interested in connecting
+            or working on something meaningful, let&apos;s create together!
+          </p>
           {/* Replace this line */}
 
           <a 
