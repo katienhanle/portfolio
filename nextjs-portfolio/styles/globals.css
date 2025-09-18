@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
+/* ===== Theme tokens ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Use a single source of truth for the background */
+  --background: linear-gradient(to bottom, #373F51, #373F51, #565a73, rgb(112, 136, 162));
+  --foreground: #E0E0E0;
+
+  /* Optional font tokens (keep if you wire up Geist) */
+  --font-geist-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 @theme inline {
@@ -12,39 +18,61 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* You can tweak foreground here if you want a lighter/darker scheme override */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: linear-gradient(to bottom, #373F51, #373F51, #565a73, rgb(112, 136, 162));
+    --foreground: #EDEDED;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ===== Global element resets ===== */
+html,
+body,
+#__next {
+  height: 100%;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* stops sideways scrollbars */
+}
+
+/* ===== One body rule only ===== */
+body {
+  background: var(--background);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+/* ===== Underline animation for nav links ===== */
 a .underline {
   position: absolute;
   bottom: 0;
   left: 0;
   height: 3px;
   width: 100%;
-  background-color: #A9BCD0;
+  background-color: #0a0a0a;
   border-radius: 2px;
   animation: slideIn 0.3s ease-in-out forwards;
 }
 
 @keyframes slideIn {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0%; }
+  to   { width: 100%; }
 }
 
+/* ===== Ghost button ===== */
 .ghost-button {
   display: inline-block;
   margin-top: 1rem;
@@ -63,20 +91,12 @@ a .underline {
   color: #373F51;
 }
 
+/* ===== Simple fade-in utility ===== */
 .fade-in {
   opacity: 0;
   animation: fadeIn 0.4s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
+  to { opacity: 1; }
 }
