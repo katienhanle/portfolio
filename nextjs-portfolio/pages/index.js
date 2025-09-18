@@ -12,6 +12,17 @@ export default function Home() {
   // current path for active nav styling
   const { pathname } = useRouter();
   const currentPath = pathname;
+  const items = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Playground', href: '/playground' },
+  ];
+
+  const isActive = (href) =>
+    (href === '/' && currentPath === '/') ||
+    (href !== '/' && currentPath.startsWith(href));
+
   
   // Shared typographic + layout tokens (same as project pages)
   const styles = {
@@ -86,49 +97,21 @@ export default function Home() {
       {/* Header */}
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
         <div></div>
-        <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-          {['Home', 'About', 'Projects', 'Playground'].map((label) => {
-            const href =
-              label === 'Home'
-                ? '/'
-                : label === 'Playground'
-                ? '/playground'
-                : `/${label.toLowerCase()}`;
-
-            // highlight active page (treat /projects/* as active for Projects)
-            const isActive =
-              (href === '/' && currentPath === '/') ||
-              (href === '/about' && currentPath.startsWith('/about')) ||
-              (href === '/projects' && (currentPath === '/projects' || currentPath.startsWith('/projects/'))) ||
-              (href === '/playground' && currentPath.startsWith('/playground'));
-
+        <nav className="nav">
+          {items.map(({ label, href }) => {
+            const active = isActive(href);
             return (
               <a
                 key={label}
                 href={href}
-                style={{
-                  position: 'relative',
-                  textDecoration: 'none',
-                  color: 'white',
-                  fontWeight: isActive ? 'bold' : 'normal',
-                  fontSize: '1.2rem',
-                  paddingBottom: '0.25rem',
-                }}
-                onMouseEnter={(e) => {
-                  const underline = document.createElement('div');
-                  underline.className = 'underline';
-                  e.currentTarget.appendChild(underline);
-                }}
-                onMouseLeave={(e) => {
-                  const underline = e.currentTarget.querySelector('.underline');
-                  if (underline) e.currentTarget.removeChild(underline);
-                }}
+                className={`nav-link${active ? ' active' : ''}`}
               >
                 {label}
               </a>
             );
           })}
         </nav>
+
       </header>
 
       {/* Hero */}
@@ -148,24 +131,25 @@ export default function Home() {
         <div style={{ flex: '1 1 520px', maxWidth: 720 }}>
           <h1 style={styles.titleH1}>Hi, I’m Katie.</h1>
           <p style={styles.body}>
-            I&apos;m a designer and visual storyteller bringing together UX, branding, and performance to create engaging digital experiences.
+            Based in the Bay Area, I&apos;m a designer and visual storyteller bringing together UX, branding, and performance to create engaging digital experiences.
           </p>
           <hr style={{ margin: '1.5rem 0 0', borderColor: 'rgba(255, 255, 255, 0.25)' }} />
         </div>
-        <div style={{ flex: '0 0 auto' }}>
-          <Image
-            src="/headshot.png"
-            alt="Katie Headshot"
-            width={220}
-            height={220}
-            style={{
-              borderRadius: '100%',
-              objectFit: 'cover',
-              objectPosition: 'center',
-              boxShadow: '0 0 25px rgba(255,255,255,0.18)',
-            }}
-          />
-        </div>
+        {/* <div style={{ flex: '0 0 auto' }}>
+                  <Image
+                    src="/headshot.png"
+                    alt="Katie Headshot"
+                    width={220}
+                    height={220}
+                    style={{
+                      borderRadius: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'center',
+                      boxShadow: '0 0 25px rgba(255,255,255,0.18)',
+                    }}
+                  />
+                </div> */}
+
       </motion.section>
 
       {/* Work Tabs */}

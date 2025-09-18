@@ -29,11 +29,40 @@ export default function App({ Component, pageProps }) {
           padding: 0;
           overflow-x: hidden;
           overscroll-behavior: none;
-          background: ${pageBg};            /* <- dynamic so no blue flash */
+          background: ${pageBg};
           background-size: cover;
           background-repeat: no-repeat;
         }
+
+        /* ===== NAV underline styles ===== */
+        .nav { display: flex; gap: 2rem; align-items: center; }
+
+        .nav-link {
+          position: relative;
+          text-decoration: none;
+          color: white;
+          font-size: 1.2rem;
+          padding-bottom: 0.25rem;
+          font-weight: 400;
+        }
+
+        .nav-link::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          height: 2px;
+          width: 0;
+          background: white;
+          transition: width 0.25s ease;
+        }
+
+        .nav-link:hover::after { width: 100%; }
+
+        .nav-link.active::after { width: 100%; }
+        .nav-link.active { font-weight: 700; }
       `}</style>
+
 
       {/* Stacking context so old/new pages can overlap during crossfade */}
       <div style={{ position: 'relative', minHeight: '100vh' }}>

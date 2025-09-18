@@ -86,32 +86,19 @@ export default function Playground() {
       {/* Header */}
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
         <div />
-        <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-          {items.map(({ label, href }) => (
-            <a
-              key={label}
-              href={href}
-              style={{
-                position: 'relative',
-                textDecoration: 'none',
-                color: 'white', // fix from `label === 'white'`
-                fontWeight: isActive(href) ? 'bold' : 'normal',
-                fontSize: '1.2rem',
-                paddingBottom: '0.25rem',
-              }}
-              onMouseEnter={(e) => {
-                const underline = document.createElement('div');
-                underline.className = 'underline';
-                e.currentTarget.appendChild(underline);
-              }}
-              onMouseLeave={(e) => {
-                const underline = e.currentTarget.querySelector('.underline');
-                if (underline) e.currentTarget.removeChild(underline);
-              }}
-            >
-              {label}
-            </a>
-          ))}
+        <nav className="nav">
+          {items.map(({ label, href }) => {
+            const active = isActive(href);
+            return (
+              <a
+                key={label}
+                href={href}
+                className={`nav-link${active ? ' active' : ''}`}
+              >
+                {label}
+              </a>
+            );
+          })}
         </nav>
       </header>
 
