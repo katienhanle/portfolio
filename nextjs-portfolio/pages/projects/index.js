@@ -1,61 +1,58 @@
-// pages/index.js
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
+export default function ProjectsIndexPage() {
+  // ✅ Hooks must be inside the component
+  const { pathname } = useRouter();
+  const currentPath = pathname;
 
-export default function ProjectsPage() {
+  const items = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Playground', href: '/playground' },
+  ];
+  const isActive = (href) =>
+    (href === '/' && currentPath === '/') ||
+    (href === '/about' && currentPath.startsWith('/about')) ||
+    (href === '/projects' && (currentPath === '/projects' || currentPath.startsWith('/projects/'))) ||
+    (href === '/playground' && currentPath.startsWith('/playground'));
+
   return (
     <div style={{ background: '#0D0D0D', color: 'white', minHeight: '100vh', padding: '2rem' }}>
       {/* Header */}
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
         <div />
-        {(() => {
-          const { pathname } = useRouter();
-          const currentPath = pathname;
-          const items = [
-            { label: 'Home', href: '/' },
-            { label: 'About', href: '/about' },
-            { label: 'Projects', href: '/projects' },
-            { label: 'Playground', href: '/playground' },
-          ];
-          const isActive = (href) =>
-            (href === '/' && currentPath === '/') ||
-            (href === '/about' && currentPath.startsWith('/about')) ||
-            (href === '/projects' && (currentPath === '/projects' || currentPath.startsWith('/projects/'))) ||
-            (href === '/playground' && currentPath.startsWith('/playground'));
-
-          return (
-            <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              {items.map(({ label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  style={{
-                    position: 'relative',
-                    textDecoration: 'none',
-                    color: 'white',
-                    fontWeight: isActive(href) ? 'bold' : 'normal',
-                    fontSize: '1.2rem',
-                    paddingBottom: '0.25rem',
-                  }}
-                  onMouseEnter={(e) => {
-                    const underline = document.createElement('div');
-                    underline.className = 'underline';
-                    e.currentTarget.appendChild(underline);
-                  }}
-                  onMouseLeave={(e) => {
-                    const underline = e.currentTarget.querySelector('.underline');
-                    if (underline) e.currentTarget.removeChild(underline);
-                  }}
-                >
-                  {label}
-                </a>
-              ))}
-            </nav>
-          );
-        })()}
+        <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+          {items.map(({ label, href }) => (
+            <a
+              key={label}
+              href={href}
+              style={{
+                position: 'relative',
+                textDecoration: 'none',
+                color: 'white',
+                fontWeight: isActive(href) ? 'bold' : 'normal',
+                fontSize: '1.2rem',
+                paddingBottom: '0.25rem',
+              }}
+              onMouseEnter={(e) => {
+                const underline = document.createElement('div');
+                underline.className = 'underline';
+                e.currentTarget.appendChild(underline);
+              }}
+              onMouseLeave={(e) => {
+                const underline = e.currentTarget.querySelector('.underline');
+                if (underline) e.currentTarget.removeChild(underline);
+              }}
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
       </header>
+
 
       {/* Title */}
       <h1 style={{ fontSize: '2.2rem', fontWeight: '800', marginTop: '3.5rem' }}>

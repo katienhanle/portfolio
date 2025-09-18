@@ -4,132 +4,108 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-
 export default function StepSyncProject() {
-  // --- Typography + layout tokens (keeps things consistent) ---
-  const styles = {
-    page: {
-      background: '#0D0D0D',
-      color: '#E0E0E0',
-      minHeight: '100vh',
-      padding: '2rem',
-    },
-    section: {
-      marginTop: '3.5rem',
-      maxWidth: '800px',
-      marginInline: 'auto',
-      textAlign: 'left',
-    },
-    sectionLabel: {
-      fontSize: '0.9rem',
-      letterSpacing: '0.1rem',
-      textTransform: 'uppercase',
-      color: '#E0E0E0',
-      fontWeight: 500,
-      marginBottom: '0.5rem',
-    },
-    titleH1: {
-      fontSize: '2.2rem',
-      fontWeight: 800,
-      margin: 0,
-    },
-    titleH2: {
-      fontSize: '1.4rem',
-      fontWeight: 700,
-      margin: 0,
-      marginBottom: '1.25rem',
-    },
-    body: {
-      fontSize: '0.95rem',
-      lineHeight: 1.7,
-      color: '#E0E0E0',
-      margin: 0,
-      marginTop: '0.75rem',
-    },
-    calloutH3: {
-      fontSize: '1.25rem',
-      fontWeight: 600,
-      marginTop: '2rem',
-      marginBottom: '1rem',
-      color: '#E0E0E0',
-    },
-    quote: {
-      backgroundColor: 'rgba(255,255,255,0.05)',
-      border: '1px solid rgba(255,255,255,0.15)',
-      borderRadius: '0.75rem',
-      padding: '1.25rem 1.5rem',
-      margin: '1.5rem 0 0',
-      fontStyle: 'italic',
-      fontSize: '1.05rem',
-      lineHeight: 1.6,
-      color: '#E0E0E0',
-    },
-    gridWrap: {
-      display: 'grid',
-      gridTemplateColumns: '2fr 1fr',
-      gap: '2rem',
-      alignItems: 'flex-start',
-      marginTop: '1.75rem',
-      maxWidth: '1200px',
-      marginInline: 'auto',
-    },
-  };
+  const { pathname } = useRouter();
+  const currentPath = pathname;
 
-  return (
-    <div style={styles.page}>
-      <Head>
-        <title>StepSync Project</title>
-      </Head>
+  const items = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Playground', href: '/playground' },
+  ];
+  const isActive = (href) =>
+    (href === '/' && currentPath === '/') ||
+    (href === '/about' && currentPath.startsWith('/about')) ||
+    (href === '/projects' && (currentPath === '/projects' || currentPath.startsWith('/projects/'))) ||
+    (href === '/playground' && currentPath.startsWith('/playground'));
 
-      {/* Header */}
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-        <div />
-        {(() => {
-          const { pathname } = useRouter();
-          const currentPath = pathname;
-          const items = [
-            { label: 'Home', href: '/' },
-            { label: 'About', href: '/about' },
-            { label: 'Projects', href: '/projects' },
-            { label: 'Playground', href: '/playground' },
-          ];
-          const isActive = (href) =>
-            (href === '/' && currentPath === '/') ||
-            (href === '/about' && currentPath.startsWith('/about')) ||
-            (href === '/projects' && (currentPath === '/projects' || currentPath.startsWith('/projects/'))) ||
-            (href === '/playground' && currentPath.startsWith('/playground'));
+    const styles = {
+      page: {
+        background: '#0D0D0D',
+        color: '#E0E0E0',
+        minHeight: '100vh',
+        padding: '2rem',
+      },
+      section: {
+        marginTop: '3.5rem',
+        maxWidth: '800px',
+        marginInline: 'auto',
+        textAlign: 'left',
+      },
+      sectionLabel: {
+        fontSize: '0.9rem',
+        letterSpacing: '0.1rem',
+        textTransform: 'uppercase',
+        color: '#E0E0E0',
+        fontWeight: 500,
+        marginBottom: '0.5rem',
+      },
+      titleH1: {
+        fontSize: '2.2rem',
+        fontWeight: 800,
+        margin: 0,
+      },
+      titleH2: {
+        fontSize: '1.4rem',
+        fontWeight: 700,
+        margin: 0,
+        marginBottom: '1.25rem',
+      },
+      body: {
+        fontSize: '0.95rem',
+        lineHeight: 1.7,
+        color: '#E0E0E0',
+        margin: 0,
+        marginTop: '0.75rem',
+      },
+      calloutH3: {
+        fontSize: '1.25rem',
+        fontWeight: 600,
+        marginTop: '2rem',
+        marginBottom: '1rem',
+        color: '#E0E0E0',
+      },
+      quote: {
+        backgroundColor: 'rgba(255,255,255,0.05)',
+        border: '1px solid rgba(255,255,255,0.15)',
+        borderRadius: '0.75rem',
+        padding: '1.25rem 1.5rem',
+        margin: '1.5rem 0 0',
+        fontStyle: 'italic',
+        fontSize: '1.05rem',
+        lineHeight: 1.6,
+        color: '#E0E0E0',
+      },
+      gridWrap: {
+        display: 'grid',
+        gridTemplateColumns: '2fr 1fr',
+        gap: '2rem',
+        alignItems: 'flex-start',
+        marginTop: '1.75rem',
+        maxWidth: '1200px',
+        marginInline: 'auto',
+      },
+    };
+  
+    return (
+      <div style={styles.page}>
+        <Head><title>StepSync Project</title></Head>
+  
+        <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <div />
+          <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+            {items.map(({ label, href }) => (
+              <a key={label} href={href} style={{
+                position: 'relative', textDecoration: 'none', color: 'white',
+                fontWeight: isActive(href) ? 'bold' : 'normal', fontSize: '1.2rem', paddingBottom: '0.25rem',
+              }}>
+                {label}
+              </a>
+            ))}
+          </nav>
+        </header>
 
-          return (
-            <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-              {items.map(({ label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  style={{
-                    position: 'relative',
-                    textDecoration: 'none',
-                    color: 'white',
-                    fontWeight: isActive(href) ? 'bold' : 'normal',
-                    fontSize: '1.2rem',
-                    paddingBottom: '0.25rem',
-                  }}
-                  onMouseEnter={(e) => {
-                    const underline = document.createElement('div');
-                    underline.className = 'underline';
-                    e.currentTarget.appendChild(underline);
-                  }}
-                  onMouseLeave={(e) => {
-                    const underline = e.currentTarget.querySelector('.underline');
-                    if (underline) e.currentTarget.removeChild(underline);
-                  }}
-                >
-                  {label}
-                </a>
-              ))}
-            </nav>
-          );
-        })()}
-      </header>
 
 
       {/* Title Section */}

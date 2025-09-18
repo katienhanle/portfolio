@@ -1,6 +1,7 @@
 // pages/about.js
 import React, { useRef, useState } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 export default function About() {
   const videoRef = useRef(null);
@@ -197,27 +198,33 @@ export default function About() {
 
           {/* Image square #1 */}
           <div style={{ ...styles.square, overflow: 'hidden' }}>
-            <img
+            <Image
               src="/ab2.png"            // drop your image in /public
               alt="About highlight 2"
+              width={1200}
+              height={1200}
               style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0.75rem' }}
             />
           </div>
 
           {/* Image square #2 */}
           <div style={{ ...styles.square, overflow: 'hidden' }}>
-            <img
+            <Image
               src="/ab3.png"            // drop your image in /public
               alt="About highlight 3"
+              width={1200}
+              height={1200}
               style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0.75rem' }}
             />
           </div>
 
           {/* Image square #3 */}
           <div style={{ ...styles.square, overflow: 'hidden' }}>
-            <img
+            <Image
               src="/ab4.png"            // drop your image in /public
               alt="About highlight 4"
+              width={1200}
+              height={1200}
               style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0.75rem' }}
             />
           </div>
