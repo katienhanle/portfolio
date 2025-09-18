@@ -224,7 +224,7 @@ export default function StepSyncProject() {
         <h2 style={styles.titleH2}>Clarify value and create credible visibility</h2>
 
         <p style={{ ...styles.body, marginTop: 0 }}>
-          <strong>Social media doesn't provide visibility for professionals seeking opportunities.</strong>
+          <strong>Social media doesn&apos;t provide visibility for professionals seeking opportunities.</strong>
         </p>
         <p style={styles.body}>
           I conducted interviews and collected stories from dancers across different college and
@@ -235,9 +235,9 @@ export default function StepSyncProject() {
 
         {/* Quote Block */}
         <div style={styles.quote}>
-          “Posting my dance videos onto Instagram doesn't get as many views since it’s a
-          competitive performance, and the dance videos that usually go viral aren’t professional
-          choreographies. My profile isn’t as visible to tour managers or other gig recruiters.”
+          “Posting my dance videos onto Instagram doesn&apos;t get as many views since it&apos;s a
+          competitive performance, and the dance videos that usually go viral aren&apos;t professional
+          choreographies. My profile isn&apos;t as visible to tour managers or other gig recruiters.”
         </div>
 
         {/* Issues statement */}

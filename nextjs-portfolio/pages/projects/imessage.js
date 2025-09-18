@@ -298,7 +298,7 @@ export default function IMessageProject() {
         <p style={styles.body}>
           While this project was a redesign, it reminded me that even the most familiar apps can hide
           usability pitfalls. Despite being frequent users, most of our participants made errors, which showed
-          me the importance to designing for discoverability and not just efficiency. For next steps, I'd want
+          me the importance to designing for discoverability and not just efficiency. For next steps, I&apos;d want
           to these these prototypes with a larger demographic to see how well our redesign scales amongst an
           audience larger than the student participation pool.
         </p>

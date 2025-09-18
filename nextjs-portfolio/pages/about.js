@@ -121,24 +121,24 @@ export default function About() {
       <section style={styles.gridLayout}>
         {/* Left: intro text */}
         <div style={styles.textCol}>
-          <h1 style={styles.titleH1}>I’m Katie!</h1>
+          <h1 style={styles.titleH1}>I&apos;m Katie!</h1>
           <p style={styles.body}>
-            I’m a designer, visual storyteller, and full-time creative. I studied Cognitive Science with a
-            specialization in Design & Interaction, and I’m especially motivated by inclusive design—creating
+            I&apos;m a designer, visual storyteller, and full-time creative. I studied Cognitive Science with a
+            specialization in Design & Interaction, and I&apos;m especially motivated by inclusive design—creating
             experiences that are usable and welcoming for everyone. I aim to build with empathy at every step.
           </p>
           <p style={styles.body}>
-            Creativity has always been my core, not just in design but in movement. When I’m not building
+            Creativity has always been my core, not just in design but in movement. When I&apos;m not building
             interfaces or editing videos, you can probably find me choreographing, leading dance teams, or
             performing onstage. That same love for rhythm, storytelling, and visual impact shows up in the way
             I design, with flow, intention, and detail.
           </p>
           <p style={styles.body}>
-            I enjoy listening to music, and I’ve been invited to travel, perform on stage, and even judge
+            I enjoy listening to music, and I&apos;ve been invited to travel, perform on stage, and even judge
             competitions—experiences that continue to shape both my artistry and my perspective as a creative.
           </p>
           <p style={styles.body}>Some of my favorite artists include fromis_9, TWICE, aespa, and tlinh.</p>
-          <p style={styles.body}>Let’s collaborate →</p>
+          <p style={styles.body}>Let&apos;s collaborate →</p>
         </div>
 
         {/* Right: 2×2 squares */}

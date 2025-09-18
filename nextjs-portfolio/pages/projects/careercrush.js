@@ -290,7 +290,7 @@ export default function CareerCrushProject() {
                     </div>
                     <h2 style={styles.titleH2}>Easy Onboarding and Profile Setup</h2>
                     <p style={styles.body}>
-                    Users start by selecting whether they’re a job seeker or recruiter, and create a quick profile
+                    Users start by selecting whether they&apos;re a job seeker or recruiter, and create a quick profile
                     through sign-up and job preferences. This step ensures both sides are matched with opportunities
                     that fit their goals from the very start.
                     </p>
@@ -331,7 +331,7 @@ export default function CareerCrushProject() {
       {/* Evaluation & Feedback */}
       <section style={styles.section}>
         <p style={styles.sectionLabel}> Evaluation &amp; Feedback</p>
-        <h2 style={styles.titleH2}>What worked and what didn’t</h2>
+        <h2 style={styles.titleH2}>What worked and what didn&apos;t</h2>
 
         {/* Design Decisions */}
         <div style={{ display: 'flex', justifyContent: 'center', margin: '0rem 0 0' }}>
