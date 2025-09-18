@@ -274,7 +274,93 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+            {activeTab === 'View All' && (
+              <section style={{ marginTop: '2.25rem' }}>
+                <h3 style={{ ...styles.calloutH3, marginBottom: '0.75rem' }}>Graphics</h3>
+
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+                    gap: '1.25rem',
+                  }}
+                >
+                  {/* Real card */}
+                  <figure
+                    style={{
+                      background: 'rgba(255,255,255,0.04)',
+                      border: '1px solid rgba(255,255,255,0.12)',
+                      borderRadius: '12px',
+                      overflow: 'hidden',
+                      margin: 0,
+                    }}
+                  >
+                    <a
+                      href="/StepSync_Poster_Graphic.png"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ display: 'block' }}
+                    >
+                      <Image
+                        src="/StepSync_Poster_Graphic.png"
+                        alt="StepSync — Promo Poster"
+                        width={400}
+                        height={550}
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                          display: 'block',
+                        }}
+                      />
+                    </a>
+                    <figcaption style={{ padding: '0.75rem' }}>
+                      <h3 style={{ ...styles.calloutH3, marginTop: 0 }}>StepSync — Promo Poster</h3>
+                      <p style={styles.meta}>Graphic Design · Branding</p>
+                    </figcaption>
+                  </figure>
+
+                  {/* Placeholder card 1 */}
+                  <figure
+                    style={{
+                      background: 'rgba(255,255,255,0.02)',
+                      border: '1px dashed rgba(255,255,255,0.2)',
+                      borderRadius: '12px',
+                      display: 'grid',
+                      placeItems: 'center',
+                      height: '100%',
+                      minHeight: 320,
+                      margin: 0,
+                    }}
+                  >
+                    <p style={{ color: '#9CA3AF', fontStyle: 'italic' }}>Coming soon</p>
+                  </figure>
+
+                  {/* Placeholder card 2 */}
+                  <figure
+                    style={{
+                      background: 'rgba(255,255,255,0.02)',
+                      border: '1px dashed rgba(255,255,255,0.2)',
+                      borderRadius: '12px',
+                      display: 'grid',
+                      placeItems: 'center',
+                      height: '100%',
+                      minHeight: 320,
+                      margin: 0,
+                    }}
+                  >
+                    <p style={{ color: '#9CA3AF', fontStyle: 'italic' }}>Coming soon</p>
+                  </figure>
+                </div>
+
+                <div style={{ marginTop: '0.75rem' }}>
+                  <button onClick={() => setActiveTab('Graphics')} className="ghost-button">
+                    See all Graphics →
+                  </button>
+                </div>
+              </section>
+            )}
           </>
+          
         )}
 
         {activeTab === '3D Illustrations' && (
@@ -350,9 +436,15 @@ export default function Home() {
         <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
             <div>
-              <h3 style={styles.calloutH3}>Katie Le</h3>
+              <h3 style={styles.calloutH3}>Katie Nhan Le</h3>
               <p style={styles.meta}>
-                About Me ·{' '}
+                <Link
+                  href="/about"
+                  style={{ color: '#0070f3', textDecoration: 'underline', fontWeight: '500' }}
+                >
+                  About Me
+                </Link>{' '}
+                ·{' '}
                 <a
                   href="/KatieNhanLe_Resume.pdf"
                   target="_blank"
@@ -360,7 +452,7 @@ export default function Home() {
                   style={{ color: '#0070f3', textDecoration: 'underline', fontWeight: '500' }}
                 >
                   Resume
-                </a>{' '}
+                </a>
               </p>
             </div>
           </div>
