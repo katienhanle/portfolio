@@ -148,7 +148,7 @@ export default function Home() {
         <div style={{ flex: '1 1 520px', maxWidth: 720 }}>
           <h1 style={styles.titleH1}>Hi, I’m Katie.</h1>
           <p style={styles.body}>
-            I’m a designer and visual storyteller bringing together UX, branding, and performance to create engaging digital experiences.
+            I&apos;m a designer and visual storyteller bringing together UX, branding, and performance to create engaging digital experiences.
           </p>
           <hr style={{ margin: '1.5rem 0 0', borderColor: 'rgba(255, 255, 255, 0.25)' }} />
         </div>

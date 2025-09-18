@@ -142,7 +142,7 @@ export default function IMessageProject() {
             <div style={{ marginBottom: '1.25rem' }}>
               <p style={{ ...styles.body, fontWeight: 700 }}>Project Overview:</p>
               <p style={styles.body}>
-                Our project aimed to identify and address common user errors within Apple’s iMessage app.
+                Our project aimed to identify and address common user errors within Apple&apos;s iMessage app.
                 Through conducting interviews with 18 university students, we pinpointed issues including the
                 discoverability of recently deleted messages, confusion between dictation and voice memo
                 functions, and inconsistent gesture actions. Our redesigned features included improved
