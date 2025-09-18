@@ -128,7 +128,7 @@ export default function About() {
           </p>
           <p style={styles.body}>
             I also love playing video games, especially FPS and interactive/narrative horror games 
-          like Valorant and Until Dawn (even if I'm bad with horror).
+            like Valorant and Until Dawn (even if I&apos;m bad with horror).
           </p>
           <p style={styles.body}>
             I&apos;d say one of my favorite hobbies is simply “meeting people.” I enjoy learning about
