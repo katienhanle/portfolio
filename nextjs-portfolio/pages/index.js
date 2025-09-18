@@ -438,6 +438,11 @@ export default function Home() {
                   Resume
                 </a>
               </p>
+
+              {/* Add stack attribution here */}
+              <p style={{ ...styles.meta, marginTop: '0.5rem', fontStyle: 'italic' }}>
+                Coded and built with Next.js & React · Deployed on Vercel
+              </p>
             </div>
           </div>
 

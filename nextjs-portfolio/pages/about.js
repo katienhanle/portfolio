@@ -126,7 +126,31 @@ export default function About() {
             competitions—experiences that continue to shape both my artistry and my perspective as a creative.
           </p>
           <p style={styles.body}>Some of my favorite artists include fromis_9, TWICE, aespa, and tlinh.</p>
-          <p style={styles.body}>Let&apos;s collaborate →</p>
+          {/* Replace this line */}
+
+          <a 
+            href="mailto:katienhanle@gmail.com" 
+            style={{
+              display: 'inline-block',
+              marginTop: '1.5rem',
+              padding: '0.75rem 1.5rem',
+              backgroundColor: '#E0E0E0',
+              color: '#0D0D0D',
+              borderRadius: '0.5rem',
+              fontWeight: 600,
+              textDecoration: 'none',
+              transition: 'all 0.25s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#cfcfcf';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#E0E0E0';
+            }}
+          >
+            Let&apos;s collaborate →
+          </a>
+
         </div>
 
         {/* Right: 2×2 squares */}
