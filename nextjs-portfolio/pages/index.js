@@ -131,13 +131,13 @@ export default function Home() {
         <div style={{ flex: '1 1 520px', maxWidth: 720 }}>
           <h1 style={styles.titleH1}>Hi, I’m Katie.</h1>
           <p style={styles.body}>
-            Based in the Bay Area, I&apos;m a designer and visual storyteller bringing together UX, branding, and performance to create engaging digital experiences.
+            Based in the Bay Area, I&apos;m a designer, content creator, and visual storyteller, bringing together UX, entertainment, and branding.
           </p>
           <hr style={{ margin: '1.5rem 0 0', borderColor: 'rgba(255, 255, 255, 0.25)' }} />
         </div>
-        {/* <div style={{ flex: '0 0 auto' }}>
+        <div style={{ flex: '0 0 auto' }}>
                   <Image
-                    src="/headshot.png"
+                    src="/headshotnew.png"
                     alt="Katie Headshot"
                     width={220}
                     height={220}
@@ -148,7 +148,7 @@ export default function Home() {
                       boxShadow: '0 0 25px rgba(255,255,255,0.18)',
                     }}
                   />
-                </div> */}
+                </div>
 
       </motion.section>
 
@@ -430,7 +430,7 @@ export default function Home() {
                 </Link>{' '}
                 ·{' '}
                 <a
-                  href="/KatieNhanLe_Resume.pdf"
+                  href="/KatieNhanLe_UIUX_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: '#0070f3', textDecoration: 'underline', fontWeight: '500' }}
