@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
+import GlassNav from '@/components/GlassNav';
+import GlassAvatar from '@/components/GlassAvatar';
+
 
 export default function Home() {
   const tabs = ['View All', 'UX/UI Projects', /* '3D Illustrations', */ 'Graphics'];
@@ -82,38 +85,28 @@ export default function Home() {
     pill: (active) => ({
       padding: '0.5rem 1.1rem',
       borderRadius: '999px',
-      border: active ? '2px solid white' : '1px solid rgba(255,255,255,0.4)',
-      background: active ? '#ffffff22' : 'transparent',
+      border: active
+        ? '1.5px solid rgba(255,255,255,0.3)'
+        : '1px solid rgba(255,255,255,0.15)',
+      background: active
+        ? 'rgba(255,255,255,0.1)'
+        : 'rgba(255,255,255,0.05)',
+      backdropFilter: 'blur(2px)',
+      WebkitBackdropFilter: 'blur(2px)',
       color: 'white',
-      fontWeight: active ? 700 : 400,
+      fontWeight: active ? 600 : 400,
       fontSize: '0.95rem',
       cursor: 'pointer',
-      transition: 'all 0.25s ease',
+      transition: 'all 0.25s ease',    
     }),
+    
   };
 
   return (
     <div style={styles.page}>
-      {/* Header */}
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-        <div></div>
-        <nav className="nav">
-          {items.map(({ label, href }) => {
-            const active = isActive(href);
-            return (
-              <a
-                key={label}
-                href={href}
-                className={`nav-link${active ? ' active' : ''}`}
-              >
-                {label}
-              </a>
-            );
-          })}
-        </nav>
-
-      </header>
-
+      <GlassNav />
+      <div style={{ height: '5rem' }} />
+  
       {/* Hero */}
       <motion.section
         initial={{ y: -24, opacity: 0 }}
@@ -136,19 +129,9 @@ export default function Home() {
           <hr style={{ margin: '1.5rem 0 0', borderColor: 'rgba(255, 255, 255, 0.25)' }} />
         </div>
         <div style={{ flex: '0 0 auto' }}>
-                  <Image
-                    src="/headshotnew.png"
-                    alt="Katie Headshot"
-                    width={220}
-                    height={220}
-                    style={{
-                      borderRadius: '100%',
-                      objectFit: 'cover',
-                      objectPosition: 'center',
-                      boxShadow: '0 0 25px rgba(255,255,255,0.18)',
-                    }}
-                  />
-                </div>
+          <GlassAvatar src="/headshotnew.png" alt="Katie Headshot" size={220} />
+        </div>
+
 
       </motion.section>
 
@@ -195,7 +178,7 @@ export default function Home() {
                   style={{ width: '100%', height: 'auto', borderRadius: '1rem' }}
                 />
               </div>
-              <div style={{ flex: '2 1 520px' }}>
+              <div style={{ flex: '2 1 520px'}}>
                 <h3 style={styles.calloutH3}>StepSync: Dance Portfolio & Audition Tracking App</h3>
                 <p style={styles.meta}>UX/UI Design · Branding · Product Strategy</p>
                 <ul style={styles.list}>
@@ -203,7 +186,22 @@ export default function Home() {
                   <li>Created a portfolio and credentialing platform concept for dancers and choreographers.</li>
                   <li>Developed features to help dancer track auditions and showcase their experience.</li>
                 </ul>
-                <Link href="/projects/stepsync" className="ghost-button">
+                <Link
+                  href="/projects/stepsync"
+                  style={{
+                    ...styles.pill(false),
+                    display: 'inline-block',
+                    marginTop: '1.25rem',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
+                  }}
+                >
                   View Project →
                 </Link>
               </div>
@@ -228,7 +226,22 @@ export default function Home() {
                   <li>Insights from surveys and heuristics informed key flows and content.</li>
                   <li>Universal profile, swipe cards, and recruiter messaging personalize the journey.</li>
                 </ul>
-                <Link href="/projects/careercrush" className="ghost-button">
+                <Link
+                  href="/projects/careercrush"
+                  style={{
+                    ...styles.pill(false),
+                    display: 'inline-block',
+                    marginTop: '1.25rem',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
+                  }}
+                >
                   View Project →
                 </Link>
               </div>
@@ -253,7 +266,22 @@ export default function Home() {
                   <li>Added clear signifiers and action sheets to reduce confusion and errors.</li>
                   <li>Iterated from interviews and observations of 18 student participants.</li>
                 </ul>
-                <Link href="/projects/imessage" className="ghost-button">
+                <Link
+                  href="/projects/imessage"
+                  style={{
+                    ...styles.pill(false),
+                    display: 'inline-block',
+                    marginTop: '1.25rem',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
+                  }}
+                >
                   View Project →
                 </Link>
               </div>

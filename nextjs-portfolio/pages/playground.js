@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from 'framer-motion';
+import GlassNav from '@/components/GlassNav'
+
 
 export default function Playground() {
   // Shared tokens
@@ -174,20 +176,9 @@ export default function Playground() {
 
   return (
     <main style={styles.page}>
-      {/* Header */}
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-        <div />
-        <nav className="nav">
-          {items.map(({ label, href }) => {
-            const active = isActive(href);
-            return (
-              <a key={label} href={href} className={`nav-link${active ? ' active' : ''}`}>
-                {label}
-              </a>
-            );
-          })}
-        </nav>
-      </header>
+      <GlassNav />
+      <div style={{ height: '5rem' }} /> {/* spacer below fixed nav */}
+
 
       {/* Title */}
       <section style={{ marginTop: '3.5rem' }}>

@@ -2,6 +2,8 @@
 import React, { useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import GlassNav from '@/components/GlassNav'
+
 
 export default function About() {
   const videoRef = useRef(null);
@@ -85,25 +87,9 @@ export default function About() {
   };
 
   return (
-    <div style={styles.page}>
-      {/* Header */}
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-        <div />
-        <nav className="nav">
-          {items.map(({ label, href }) => {
-            const active = isActive(href);
-            return (
-              <a
-                key={label}
-                href={href}
-                className={`nav-link${active ? ' active' : ''}`}
-              >
-                {label}
-              </a>
-            );
-          })}
-        </nav>
-      </header>
+      <div style={styles.page}>
+        <GlassNav />
+        <div style={{ height: '5rem' }} />
 
       {/* Two-column layout */}
       <section style={styles.gridLayout}>
@@ -122,43 +108,47 @@ export default function About() {
             I design, with flow, intention, and detail.
           </p>
           <p style={styles.body}>
-            I enjoy listening to music, and I&apos;ve been invited to travel, perform on stage, and even judge
-            competitions—experiences that continue to shape both my artistry and my perspective as a creative.
-            Some of my favorite artists include fromis_9, TWICE, aespa, and tlinh.
+            I also love playing video games, especially horror games on ROBLOX (even if I&apos;m bad with horror).
           </p>
           <p style={styles.body}>
-            I also love playing video games, especially FPS and interactive/narrative horror games 
-            like Valorant and Until Dawn (even if I&apos;m bad with horror).
-          </p>
-          <p style={styles.body}>
-            I&apos;d say one of my favorite hobbies is simply “meeting people.” I enjoy learning about
-            others and discovering new ways of looking at the world. If you&apos;re interested in connecting
+            I&apos;d say one of my favorite hobbies is simply “meeting people.” If you&apos;re interested in connecting
             or working on something meaningful, let&apos;s create together!
           </p>
-          {/* Replace this line */}
-
           <a 
             href="mailto:katienhanle@gmail.com" 
             style={{
               display: 'inline-block',
               marginTop: '1.5rem',
-              padding: '0.75rem 1.5rem',
-              backgroundColor: '#E0E0E0',
-              color: '#0D0D0D',
-              borderRadius: '0.5rem',
+              padding: '0.75rem 1.6rem',
+              borderRadius: '999px',
+              background: 'rgba(255,255,255,0.08)',
+              border: '1px solid rgba(255,255,255,0.18)',
+              backdropFilter: 'blur(14px) saturate(160%)',
+              WebkitBackdropFilter: 'blur(14px) saturate(160%)',
+              color: '#FFFFFF',
               fontWeight: 600,
+              fontSize: '1rem',
               textDecoration: 'none',
-              transition: 'all 0.25s ease',
+              letterSpacing: '0.02em',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.25)',
+              transition: 'all 0.3s ease',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#cfcfcf';
+              e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
+              e.currentTarget.style.boxShadow =
+                '0 8px 32px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.35)';
+              e.currentTarget.style.transform = 'translateY(-2px)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#E0E0E0';
+              e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow =
+                '0 4px 20px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.25)';
+              e.currentTarget.style.transform = 'translateY(0)';
             }}
           >
             Let&apos;s collaborate →
           </a>
+
 
         </div>
 

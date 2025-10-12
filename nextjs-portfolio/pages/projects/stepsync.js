@@ -3,6 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import GlassNav from '@/components/GlassNav';
 
 export default function StepSyncProject() {
   const { pathname } = useRouter();
@@ -91,25 +92,11 @@ export default function StepSyncProject() {
     return (
       <div style={styles.page}>
         <Head><title>StepSync Project</title></Head>
-  
-        <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-          <div />
-          <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-            {items.map(({ label, href }) => (
-              <a key={label} href={href} style={{
-                position: 'relative', textDecoration: 'none', color: 'white',
-                fontWeight: isActive(href) ? 'bold' : 'normal', fontSize: '1.2rem', paddingBottom: '0.25rem',
-              }}>
-                {label}
-              </a>
-            ))}
-          </nav>
-        </header>
-
-
+        <GlassNav/>
+        <div style={{ height: '5rem' }} /> 
 
       {/* Title Section */}
-      <section style={{ marginTop: '3.5rem' }}>
+      <section style={{ marginTop: '2.5rem' }}>
         <h1 style={styles.titleH1}>StepSync: Dance Portfolio & Audition Tracking App</h1>
 
         <div style={styles.gridWrap}>

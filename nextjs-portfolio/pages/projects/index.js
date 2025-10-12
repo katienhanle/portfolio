@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import GlassNav from '@/components/GlassNav'
+
 
 export default function ProjectsIndexPage() {
   // ✅ Hooks must be inside the component
@@ -21,26 +23,8 @@ export default function ProjectsIndexPage() {
 
   return (
     <div style={{ background: '#0D0D0D', color: 'white', minHeight: '100vh', padding: '2rem' }}>
-      {/* Header */}
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-        <div />
-        <nav className="nav">
-          {items.map(({ label, href }) => {
-            const active = isActive(href);
-            return (
-              <a
-                key={label}
-                href={href}
-                className={`nav-link${active ? ' active' : ''}`}
-              >
-                {label}
-              </a>
-            );
-          })}
-        </nav>
-
-      </header>
-
+      <GlassNav />
+      <div style={{ height: '5rem' }} /> {/* spacer below fixed nav */}
 
       {/* Title */}
       <h1 style={{ fontSize: '2.2rem', fontWeight: '800', marginTop: '3.5rem' }}>
@@ -58,22 +42,38 @@ export default function ProjectsIndexPage() {
         >
           {/* StepSync */}
           <Link href="/projects/stepsync" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div
-              style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                borderRadius: '1rem',
-                padding: '2rem',
-                boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '1rem',
-                alignItems: 'center',
-                transition: 'transform 0.2s',
-                cursor: 'pointer',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-            >
+          <div
+            style={{
+              position: 'relative',
+              borderRadius: '1rem',
+              padding: '2rem',
+              background: 'rgba(255,255,255,0.08)',
+              border: '1px solid rgba(255,255,255,0.18)',
+              backdropFilter: 'blur(14px) saturate(160%)',
+              WebkitBackdropFilter: 'blur(14px) saturate(160%)',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.25)',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1rem',
+              alignItems: 'center',
+              transition: 'all 0.3s ease',
+              transform: 'translateY(0)',
+              cursor: 'pointer',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
+              e.currentTarget.style.boxShadow =
+                '0 12px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.35)';
+              e.currentTarget.style.transform = 'translateY(-3px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow =
+                '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.25)';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+
               <div style={{ textAlign: 'left', width: '100%' }}>
                 <h2 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 700 }}>StepSync</h2>
                 <p
@@ -110,22 +110,38 @@ export default function ProjectsIndexPage() {
 
           {/* Career Crush */}
           <Link href="/projects/careercrush" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div
-              style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                borderRadius: '1rem',
-                padding: '2rem',
-                boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '1rem',
-                alignItems: 'center',
-                transition: 'transform 0.2s',
-                cursor: 'pointer',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-            >
+          <div
+            style={{
+              position: 'relative',
+              borderRadius: '1rem',
+              padding: '2rem',
+              background: 'rgba(255,255,255,0.08)',
+              border: '1px solid rgba(255,255,255,0.18)',
+              backdropFilter: 'blur(14px) saturate(160%)',
+              WebkitBackdropFilter: 'blur(14px) saturate(160%)',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.25)',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1rem',
+              alignItems: 'center',
+              transition: 'all 0.3s ease',
+              transform: 'translateY(0)',
+              cursor: 'pointer',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
+              e.currentTarget.style.boxShadow =
+                '0 12px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.35)';
+              e.currentTarget.style.transform = 'translateY(-3px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow =
+                '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.25)';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+
               <div style={{ textAlign: 'left', width: '100%' }}>
                 <h2 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 700 }}>Career Crush</h2>
                 <p
@@ -162,22 +178,38 @@ export default function ProjectsIndexPage() {
 
           {/* iMessage */}
           <Link href="/projects/imessage" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div
-              style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                borderRadius: '1rem',
-                padding: '2rem',
-                boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '1rem',
-                alignItems: 'center',
-                transition: 'transform 0.2s',
-                cursor: 'pointer',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-            >
+          <div
+            style={{
+              position: 'relative',
+              borderRadius: '1rem',
+              padding: '2rem',
+              background: 'rgba(255,255,255,0.08)',
+              border: '1px solid rgba(255,255,255,0.18)',
+              backdropFilter: 'blur(14px) saturate(160%)',
+              WebkitBackdropFilter: 'blur(14px) saturate(160%)',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.25)',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1rem',
+              alignItems: 'center',
+              transition: 'all 0.3s ease',
+              transform: 'translateY(0)',
+              cursor: 'pointer',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
+              e.currentTarget.style.boxShadow =
+                '0 12px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.35)';
+              e.currentTarget.style.transform = 'translateY(-3px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+              e.currentTarget.style.boxShadow =
+                '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.25)';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+
               <div style={{ textAlign: 'left', width: '100%' }}>
                 <h2 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 700 }}>
                   iMessage Interface Revamp
