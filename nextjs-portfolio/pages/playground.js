@@ -1,10 +1,8 @@
 // pages/playground.js
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from 'framer-motion';
-import GlassNav from '@/components/GlassNav'
-
+import GlassNav from '@/components/GlassNav';
 
 export default function Playground() {
   // Shared tokens
@@ -15,33 +13,29 @@ export default function Playground() {
       background: '#0D0D0D',
       color: '#E0E0E0',
       minHeight: '100vh',
-      padding: '2rem',
+      padding: '2rem 2rem 2rem 3.25rem', // extra left space for glass scrollbar
     },
     titleH1: { fontSize: '2.2rem', fontWeight: 800, margin: 0 },
     titleH2: { fontSize: '1.4rem', fontWeight: 700, margin: 0, marginBottom: '1.25rem' },
     body: { fontSize: '0.95rem', lineHeight: 1.7, color: '#E0E0E0', margin: 0, marginTop: '0.75rem' },
     meta: { fontSize: '0.9rem', color: '#9CA3AF', fontStyle: 'italic', margin: '0.25rem 0 0.75rem 0' },
+    card: {
+      position: 'relative',
+      borderRadius: '1rem',
+      padding: '1.5rem',
+      background: 'rgba(255,255,255,0.08)',
+      border: '1px solid rgba(255,255,255,0.18)',
+      backdropFilter: 'blur(14px) saturate(160%)',
+      WebkitBackdropFilter: 'blur(14px) saturate(160%)',
+      boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.25)',
+      transition: 'all 0.3s ease',
+    },
   };
-
-  // --- NAV ---
-  const { pathname } = useRouter();
-  const currentPath = pathname;
-  const items = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Projects', href: '/projects' },
-    { label: 'Playground', href: '/playground' },
-  ];
-  const isActive = (href) =>
-    (href === '/' && currentPath === '/') ||
-    (href === '/about' && currentPath.startsWith('/about')) ||
-    (href === '/projects' && (currentPath === '/projects' || currentPath.startsWith('/projects/'))) ||
-    (href === '/playground' && currentPath.startsWith('/playground'));
 
   // --- Timeline data: use `imgs` (array) for the carousel ---
   const timeline = [
     {
-      title: 'SFA ROBLOX Game Development',
+      title: 'Swim for Admin: Roblox Game Development',
       alt: 'ROBLOX game development thumbnails and studio',
       date: '2016',
       meta: 'Game Development · Blender · Programming',
@@ -66,6 +60,45 @@ export default function Playground() {
         </>
       ),
       imgs: ['/sfarblxstudio.png', '/sfathumb1.png', '/sfathumb2.png'],
+      href: '#',
+    },
+    {
+      title: (
+        <a
+          href="https://www.youtube.com/watch?v=jYjMsnbLX7g"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: '#E0E0E0', textDecoration: 'none' }}
+        >
+          Early Trend YouTube Roblox Music Video
+        </a>
+      ),
+      alt: 'Roblox music video thumbnail',
+      date: '2016',
+      meta: 'Video Production · Roblox Studio · Creativity',
+      desc: (
+        <>
+          Later that year, I <strong>self-produced a Roblox music video</strong>,
+          learning how to stage scenes, move in the program, and time shots inside
+          Roblox Studio. It was my first experience combining storytelling with
+          interactive environments, and it taught me how creative tools could turn
+          simple worlds into cinematic spaces. <br /><br />
+          The video reached{' '}
+          <strong
+            style={{
+              fontWeight: 700,
+              color: '#fff',
+              textDecoration: 'underline',
+              textDecorationThickness: '2px',
+              textUnderlineOffset: '4px',
+            }}
+          >
+            22,000 views+
+          </strong>{' '}
+          on YouTube after its release on <em>July 22, 2016</em>.
+        </>
+      ),
+      imgs: ['/robloxmusicvideo.jpg'],
       href: '#',
     },
     {
@@ -120,12 +153,9 @@ export default function Playground() {
           across multiple clubs and social media channels.
         </>
       ),
-      imgs: [
-        '/danceforsmiles.png', // export your poster image into /public
-      ],
-      href: '#', // optional: link to Operation Smile or event archive if you want
+      imgs: ['/danceforsmiles.png'],
+      href: '#',
     },
-    
     {
       title: 'Dance Team Leadership & Formation Design',
       alt: 'Dance project formation planning and rehearsal',
@@ -141,14 +171,9 @@ export default function Playground() {
           story, balancing rhythm, flow, and visual impact.
         </>
       ),
-      imgs: [
-        '/kut-1.png',
-        '/kut-2.png',
-        '/kut-3.png',
-      ],
-      href: '#', // you can link to a video or keep as "#"
+      imgs: ['/kut-1.png', '/kut-2.png', '/kut-3.png'],
+      href: '#',
     },
-    
   ];
 
   // Carousel state (index per timeline entry)
@@ -179,7 +204,6 @@ export default function Playground() {
       <GlassNav />
       <div style={{ height: '5rem' }} /> {/* spacer below fixed nav */}
 
-
       {/* Title */}
       <section style={{ marginTop: '3.5rem' }}>
         <h1 style={styles.titleH1}>Playground</h1>
@@ -189,23 +213,9 @@ export default function Playground() {
         </p>
       </section>
 
-      {/* Vertical Timeline */}
-      <section style={{ marginTop: '2.5rem', position: 'relative', maxWidth: 1200, marginInline: 'auto' }}>
-        {/* Vertical bar on the left */}
-        <div
-          aria-hidden="true"
-          style={{
-            position: 'absolute',
-            left: 24,
-            top: 0,
-            bottom: 0,
-            width: 2,
-            background: 'white',
-            opacity: 0.85,
-          }}
-        />
-
-        <div style={{ display: 'grid', gap: '2.25rem' }}>
+      {/* Cards (no left rail, each item is a liquid-glass panel) */}
+      <section style={{ marginTop: '2.5rem', maxWidth: 1200, marginInline: 'auto' }}>
+        <div style={{ display: 'grid', gap: '2rem' }}>
           {timeline.map((item, idx) => {
             const activeIdx = currentIndexes[idx] || 0;
             const imgSrc = (item.imgs && item.imgs[activeIdx]) || item.imgs?.[0] || item.img;
@@ -215,48 +225,21 @@ export default function Playground() {
             return (
               <article
                 key={idx}
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '72px 1fr',
-                  gap: '1.25rem',
-                  alignItems: 'start',
-                }}
+                style={styles.card}
               >
-                {/* Node */}
-                <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                  <div
-                    style={{
-                      position: 'absolute',
-                      left: 24,
-                      transform: 'translateX(-50%)',
-                      width: 34,
-                      height: 34,
-                      borderRadius: '50%',
-                      background: '#0D0D0D',
-                      border: '2px solid white',
-                      display: 'grid',
-                      placeItems: 'center',
-                    }}
-                    title={item.date}
-                  >
-                    <span style={{ fontSize: '0.8rem', color: '#ffffff' }}>•</span>
-                  </div>
-                </div>
-
-                {/* Entry: image carousel (left) + text (right) */}
+                {/* Image + Text grid */}
                 <div
                   style={{
                     display: 'grid',
-                    gridTemplateColumns: 'minmax(360px, 560px) 1fr',
+                    gridTemplateColumns: 'minmax(340px, 560px) 1fr',
                     gap: '1.5rem',
                     alignItems: 'center',
                   }}
                 >
-                  {/* Image carousel (hardened) */}
+                  {/* Image carousel */}
                   <div style={{ position: 'relative', borderRadius: 16, overflow: 'hidden', height: 320 }}>
                     <AnimatePresence initial={false} custom={direction}>
                       <motion.div
-                        // Re-mount reliably when index changes (not just when the URL string changes)
                         key={`${idx}-${activeIdx}`}
                         custom={direction}
                         initial={{ x: direction > 0 ? 60 : -60, opacity: 0 }}
@@ -267,17 +250,17 @@ export default function Playground() {
                       >
                         {imgSrc ? (
                           <Image
-                          src={imgSrc}
-                          alt={altText}
-                          width={1290}
-                          height={990}
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'contain', // fit entire image
-                            backgroundColor: '#111', // optional: fills empty space with dark bg
-                          }}
-                        />
+                            src={imgSrc}
+                            alt={altText}
+                            width={1290}
+                            height={990}
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'contain',
+                              backgroundColor: '#111',
+                            }}
+                          />
                         ) : null}
 
                         <div
@@ -318,7 +301,7 @@ export default function Playground() {
                             height: 34,
                             cursor: 'pointer',
                             lineHeight: 0,
-                            zIndex: 2, // keep above slide
+                            zIndex: 2,
                           }}
                         >
                           ‹
@@ -339,7 +322,7 @@ export default function Playground() {
                             height: 34,
                             cursor: 'pointer',
                             lineHeight: 0,
-                            zIndex: 2, // keep above slide
+                            zIndex: 2,
                           }}
                         >
                           ›
@@ -347,7 +330,6 @@ export default function Playground() {
                       </>
                     )}
                   </div>
-
 
                   {/* Text block */}
                   <div style={{ display: 'grid', alignContent: 'start', gap: '0.5rem' }}>
