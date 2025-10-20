@@ -454,15 +454,23 @@ export default function DemonSlayerProject() {
         {/* replace the placeholder block with this */}
         <div className="share-row" style={styles.shareRow}>
           {[
-            { src: "/ds/card-1.png", alt: "Result card 1" },
-            { src: "/ds/card-2.png", alt: "Result card 2" },
-            { src: "/ds/card-3.png", alt: "Result card 3" },
+            { src: "/ds/card-1.png", alt: "Result card 1", width: 1080, height: 1920 },
+            { src: "/ds/card-2.png", alt: "Result card 2", width: 1080, height: 1920 },
+            { src: "/ds/card-3.png", alt: "Result card 3", width: 1080, height: 1920 },
           ].map((c, i) => (
-            <figure key={i} style={styles.cardFigure} className="share-item">
-              {/* Next.js <Image> is ideal, but <img> keeps this drop-in simple */}
-              <img src={c.src} alt={c.alt} style={styles.cardImg} />
-              {/* optional caption */}
-              {/* <figcaption style={styles.cardCap}>Ember Style — Share card</figcaption> */}
+            <figure key={i} style={{ margin: 0, scrollSnapAlign: 'start', flex: '0 0 auto' }} className="share-item">
+              <Image
+                src={c.src}
+                alt={c.alt}
+                width={c.width}
+                height={c.height}
+                style={{ 
+                  width: '100%', 
+                  height: 'auto', 
+                  borderRadius: '0.5rem',
+                  maxWidth: '300px'
+                }}
+              />
             </figure>
           ))}
         </div>
