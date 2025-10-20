@@ -564,7 +564,7 @@ export default function DemonSlayerProject() {
       {/* Outcomes */}
       <section style={styles.section}>
         <p style={styles.sectionLabel}>Outcomes</p>
-        <h2 style={styles.titleH2}>What Shipped, What We Learned, & What's Next</h2>
+        <h2 style={styles.titleH2}>What Shipped, What We Learned, & What&apos;s Next</h2>
                 <p style={styles.body}>
                 I shipped the full quiz flow with a mobile-first result screen and a shareable card sized
                 perfectly for Instagram Stories. Once the shareable card launched, users started posting their
