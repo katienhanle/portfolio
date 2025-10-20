@@ -270,6 +270,44 @@ export default function IMessageProject() {
           audience larger than the student participation pool.
         </p>
       </section>
+      {/* Next Project CTA */}
+      <div
+        style={{
+          marginTop: '4rem',
+          textAlign: 'center',
+        }}
+      >
+        <a
+          href="/projects"
+          className="all-projects"
+        >
+          View All Projects →
+        </a>
+
+        <style jsx>{`
+          .all-projects {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 0.9rem 1.75rem;
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            transition: all 0.2s ease;
+          }
+
+          .all-projects:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.25);
+          }
+        `}</style>
+      </div>
+
     </div>
+    
   );
 }
