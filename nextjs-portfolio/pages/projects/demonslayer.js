@@ -531,7 +531,7 @@ export default function DemonSlayerProject() {
                 <p style={{ ...styles.body, opacity: 0.9 }}>
                   <strong>Site launched:</strong> <span>October&nbsp;18,&nbsp;2025</span><br />
                   <strong>Active period:</strong> <span>2&nbsp;days</span><br />
-                  <strong>Survey Responses:</strong> <span>626</span><br />
+                  <strong>Site Views:</strong> <span>6,154</span><br />
 
                   In just 24 hours, the quiz accumulated <strong>more than a thousand</strong> completions, an impressive conversion
                   window that shows the effectiveness of mobile-first shareability and social reach.
@@ -556,7 +556,7 @@ export default function DemonSlayerProject() {
                   textAlign: 'right',
                   fontStyle: 'italic'
                 }}>
-                  Data updated: October&nbsp;20,&nbsp;2025&nbsp;•&nbsp;13:48&nbsp;PM
+                  Data updated: October&nbsp;20,&nbsp;2025&nbsp;•&nbsp;16:52&nbsp;PM
                   (Based on Vercel Analytics & DS Form Responses)
                 </p>
                 <p style={styles.body}>
