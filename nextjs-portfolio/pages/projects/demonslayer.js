@@ -300,7 +300,7 @@ export default function DemonSlayerProject() {
         <p style={styles.sectionLabel}>Motivation</p>
         <h2 style={styles.titleH2}>Why I Made This</h2>
         <p style={styles.body}>
-          I’ve always enjoyed personality quizzes, especially ones I could share with friends. Recently, I’d been rewatching
+          I&apos;ve always enjoyed personality quizzes, especially ones I could share with friends. Recently, I&apos;d been rewatching
           <em> Demon Slayer </em> and saw how deeply people connected with its characters and stories.
           Around the same time, I noticed how shareable personality quizzes perform online: quick, expressive, and made
           for screenshots.
@@ -408,7 +408,7 @@ export default function DemonSlayerProject() {
                 was drawn and exported individually so they could stack on top of each other in code.
                 Keeping a consistent 32x32 grid helped to mix combinations while keeping the preview
                 aligned for the results.
-                (Each style maps to the quiz’s MBTI logic and lore.)
+                (Each style maps to the quiz&apos;s MBTI logic and lore.)
               </p>
 
               <div style={{ ...styles.card, marginTop: '1rem' }}>
@@ -555,7 +555,7 @@ export default function DemonSlayerProject() {
                 The data confirmed what I designed for: a social-first experience. Over 70% of users discovered
                 the quiz through social media, validating how the 1080×1920 layout naturally blended into story
                 shares. Most participants identified as female. This alignment between audience insight and design
-                execution showed how framing the quiz as a shareable, story-sized artifact wasn’t just aesthetic,
+                execution showed how framing the quiz as a shareable, story-sized artifact wasn&apos;t just aesthetic,
                 it was strategic.
                 </p>
               </div>
