@@ -122,7 +122,7 @@ export default function Home() {
         }}
       >
         <div style={{ flex: '1 1 520px', maxWidth: 720 }}>
-          <h1 style={styles.titleH1}>Hi, I'm Katie.</h1>
+          <h1 style={styles.titleH1}>Hi, I&apos;m Katie.</h1>
           <p style={styles.body}>
             Based in the Bay Area, I&apos;m a designer, content creator, and visual storyteller, bringing together UX, entertainment, and branding.
           </p>
@@ -686,7 +686,7 @@ export default function Home() {
           {/* Right – Contact pills */}
           <div style={{ display: 'grid', gap: '0.6rem', justifyContent: 'start' }}>
             <span style={{ fontSize: '1.05rem', fontWeight: 600, marginBottom: '0.2rem' }}>
-              Let's Connect ⇄
+              Let&apos;s Connect ⇄
             </span>
 
             <a

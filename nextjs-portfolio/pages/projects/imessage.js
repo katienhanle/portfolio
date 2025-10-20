@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import GlassNav from '@/components/GlassNav';
+import Link from "next/link";
 
 
 export default function IMessageProject() {
@@ -271,41 +272,32 @@ export default function IMessageProject() {
         </p>
       </section>
       {/* Next Project CTA */}
-      <div
-        style={{
-          marginTop: '4rem',
-          textAlign: 'center',
-        }}
-      >
-        <a
-          href="/projects"
-          className="all-projects"
-        >
-          View All Projects →
-        </a>
+    <div style={{ marginTop: "4rem", textAlign: "center" }}>
+      <Link href="/projects" legacyBehavior>
+        <a className="all-project">View All Projects →</a>
+      </Link>
 
-        <style jsx>{`
-          .all-projects {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 16px;
-            padding: 0.9rem 1.75rem;
-            color: #ffffff;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            backdrop-filter: blur(10px);
-            transition: all 0.2s ease;
-          }
-
-          .all-projects:hover {
-            transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.25);
-          }
-        `}</style>
-      </div>
+      <style jsx>{`
+        .all-project {
+          display: inline-block;
+          background: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          border-radius: 16px;
+          padding: 0.9rem 1.75rem;
+          color: #ffffff;
+          font-size: 1.1rem;
+          font-weight: 600;
+          text-decoration: none;
+          backdrop-filter: blur(10px);
+          transition: all 0.2s ease;
+        }
+        .all-project:hover {
+          transform: translateY(-3px);
+          background: rgba(255, 255, 255, 0.15);
+          border-color: rgba(255, 255, 255, 0.25);
+        }
+      `}</style>
+    </div>
 
     </div>
     

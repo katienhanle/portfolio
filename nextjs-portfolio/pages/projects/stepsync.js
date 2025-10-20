@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import GlassNav from '@/components/GlassNav';
+import Link from "next/link";
 
 export default function StepSyncProject() {
   const { pathname } = useRouter();
@@ -363,42 +364,32 @@ export default function StepSyncProject() {
               
             </section>
     {/* Next Project CTA */}
-        <div
-          style={{
-            marginTop: '4rem',
-            textAlign: 'center',
-          }}
-        >
-          <a
-            href="/projects/careercrush"
-            className="next-project"
-          >
-            View Next Project →
-          </a>
+    <div style={{ marginTop: "4rem", textAlign: "center" }}>
+      <Link href="/projects/careercrush" legacyBehavior>
+        <a className="next-project">View Next Project →</a>
+      </Link>
 
-          <style jsx>{`
-            .next-project {
-              display: inline-block;
-              background: rgba(255, 255, 255, 0.08);
-              border: 1px solid rgba(255, 255, 255, 0.15);
-              border-radius: 16px;
-              padding: 0.9rem 1.75rem;
-              color: #ffffff;
-              font-size: 1.1rem;
-              font-weight: 600;
-              text-decoration: none;
-              backdrop-filter: blur(10px);
-              transition: all 0.2s ease;
-            }
-
-            .next-project:hover {
-              transform: translateY(-3px);
-              background: rgba(255, 255, 255, 0.15);
-              border-color: rgba(255, 255, 255, 0.25);
-            }
-          `}</style>
-        </div>
-
+      <style jsx>{`
+        .next-project {
+          display: inline-block;
+          background: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          border-radius: 16px;
+          padding: 0.9rem 1.75rem;
+          color: #ffffff;
+          font-size: 1.1rem;
+          font-weight: 600;
+          text-decoration: none;
+          backdrop-filter: blur(10px);
+          transition: all 0.2s ease;
+        }
+        .next-project:hover {
+          transform: translateY(-3px);
+          background: rgba(255, 255, 255, 0.15);
+          border-color: rgba(255, 255, 255, 0.25);
+        }
+      `}</style>
+    </div>
       
     </div>
   );
