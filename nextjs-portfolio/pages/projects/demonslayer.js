@@ -231,50 +231,50 @@ export default function DemonSlayerProject() {
               Skip to Analytics ↓
             </a>
             <a
-  href="https://corpsquiz.vercel.app"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="try-button"
->
-  Try it here!
-</a>
+              href="https://corpsquiz.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="try-button"
+            >
+              Try it here!
+            </a>
 
-<style jsx>{`
-  .try-button {
-    display: inline-block;
-    margin-left: 0.75rem; /* space between the two buttons */
-    background: linear-gradient(90deg, #ffb347 0%, #ff7b00 100%);
-    border: 1.5px solid #ffb347;
-    border-radius: 999px;
-    padding: 0.45rem 1.3rem;
-    color: #2b0040;
-    font-family: 'Jersey 25', sans-serif;
-    font-size: 1.1rem;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
-    cursor: pointer;
-    transition: transform 0.1s ease, filter 0.1s ease, box-shadow 0.2s ease;
-  }
+            <style jsx>{`
+              .try-button {
+                display: inline-block;
+                margin-left: 0.75rem; /* space between the two buttons */
+                background: linear-gradient(90deg, #ffb347 0%, #ff7b00 100%);
+                border: 1.5px solid #ffb347;
+                border-radius: 999px;
+                padding: 0.45rem 1.3rem;
+                color: #2b0040;
+                font-family: 'Jersey 25', sans-serif;
+                font-size: 1.1rem;
+                text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+                cursor: pointer;
+                transition: transform 0.1s ease, filter 0.1s ease, box-shadow 0.2s ease;
+              }
 
-  .try-button:hover {
-    transform: scale(1.04);
-    filter: brightness(1.1);
-    box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
-  }
+              .try-button:hover {
+                transform: scale(1.04);
+                filter: brightness(1.1);
+                box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+              }
 
-  .try-button a {
-    text-decoration: none;
-    color: inherit;
-  }
+              .try-button a {
+                text-decoration: none;
+                color: inherit;
+              }
 
-  @media (max-width: 800px) {
-    .try-button {
-      display: block;
-      margin: 1rem 0;
-      text-align: center;
-      width: fit-content;
-    }
-  }
-`}</style>
+              @media (max-width: 800px) {
+                .try-button {
+                  display: block;
+                  margin: 1rem 0;
+                  text-align: center;
+                  width: fit-content;
+                }
+              }
+            `}</style>
 
 
 
@@ -283,7 +283,7 @@ export default function DemonSlayerProject() {
           {/* Hero image / thumbnail */}
           <div style={{ justifySelf: 'start' }}>
             <Image
-              src="/ds/dsquizthumbnailwide4.png"   // put a wide hero image in /public
+              src="/ds/dsquizthumb2.png"   // put a wide hero image in /public
               alt="Demon Slayer Quiz — Marketing"
               width={1300}
               height={1021}
@@ -388,7 +388,7 @@ export default function DemonSlayerProject() {
         {/* Image */}
         <div style={{ justifySelf: 'start' }}>
           <Image
-            src="/ds/dshifi_2.png"
+            src="/ds/dshifi2.png"
             alt="DS Lofi"
             width={972}
             height={1021}
