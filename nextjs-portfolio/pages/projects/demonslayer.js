@@ -146,7 +146,7 @@ export default function DemonSlayerProject() {
             </div>
             <div style={{ lineHeight: 2, marginTop: '0.75rem' }}>
             <p style={styles.body}><strong>Client:</strong><br />General Public / Social Media Users / Anime Fans</p>
-              <p style={styles.body}><strong>My Role:</strong><br />Marketing Design · Game Concept · Content</p>
+              <p style={styles.body}><strong>My Role:</strong><br />Marketing Design · Gaming · Social Media</p>
               <p style={styles.body}><strong>Stack:</strong><br />Figma · Framer Motion · Next.js · Vercel</p>
               <p style={styles.body}><strong>Timeline:</strong><br />October 2025</p>
             </div>

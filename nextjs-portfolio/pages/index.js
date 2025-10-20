@@ -179,7 +179,7 @@ export default function Home() {
               </div>
               <div style={{ flex: '2 1 520px' }}>
                 <h3 style={styles.calloutH3}>Corps Exam: Demon Slayer-Inspired Personality Quiz</h3>
-                <p style={styles.meta}>Marketing Design · Visual Design · Content</p>
+                <p style={styles.meta}>Marketing Design · Gaming · Social Media</p>
                 <ul style={styles.list}>
                   <li>Packaged an anime themed quiz as a collectible fan experience with pixel sprites and branded result cards.</li>
                   <li>Integrated Vercel Analytics + Google Sheets to track responses and traffic sources.</li>
