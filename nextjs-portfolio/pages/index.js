@@ -644,7 +644,7 @@ export default function Home() {
             <h3 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 800 }}>Katie Nhan Le</h3>
             <div style={{ height: 10 }} />
             <a
-              href="/KatieNhanLeResume_Creative.pdf"
+              href="/KatieNhanLe_Resume_Creative.pdf"
               target="_blank"
               rel="noopener noreferrer"
               style={{
