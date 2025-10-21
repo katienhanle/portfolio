@@ -454,9 +454,9 @@ export default function DemonSlayerProject() {
         {/* replace the placeholder block with this */}
         <div className="share-row" style={styles.shareRow}>
           {[
-            { src: "/ds/card-1.png", alt: "Result card 1", width: 1080, height: 1920 },
-            { src: "/ds/card-2.png", alt: "Result card 2", width: 1080, height: 1920 },
-            { src: "/ds/card-3.png", alt: "Result card 3", width: 1080, height: 1920 },
+            { src: "/ds/card-1.PNG", alt: "Result card 1", width: 1080, height: 1920 },
+            { src: "/ds/card-2.PNG", alt: "Result card 2", width: 1080, height: 1920 },
+            { src: "/ds/card-3.PNG", alt: "Result card 3", width: 1080, height: 1920 },
           ].map((c, i) => (
             <figure key={i} style={{ margin: 0, scrollSnapAlign: 'start', flex: '0 0 auto' }} className="share-item">
               <Image
