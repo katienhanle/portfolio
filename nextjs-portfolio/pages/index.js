@@ -166,6 +166,45 @@ export default function Home() {
         {/* View All - Recent Work */}
         {activeTab === 'View All' && (
           <>
+            {/* Feng Cha */}
+            <div style={{ display: 'flex', gap: '2rem', marginTop: '2rem', flexWrap: 'wrap' }}>
+              <div style={{ flex: '1 1 420px' }}>
+                <Image
+                  src="/fengcha/thumbnailwide1.png"
+                  alt="FengCha Project"
+                  width={1300}
+                  height={1021}
+                  style={{ width: '100%', height: 'auto', borderRadius: '1rem' }}
+                />
+              </div>
+              <div style={{ flex: '2 1 520px'}}>
+                <h3 style={styles.calloutH3}>Feng Cha Mobile App: UX Cleanup & Ordering Flow</h3>
+                <p style={styles.meta}>UX/UI Design · Prototyping · Product Strategy</p>
+                <ul style={styles.list}>
+                  <li>Evaluated the existing ordering flow to identify friction points in visual hierarchy and navigation.</li>
+                  <li>Reworked store list and menu screens into more scannable card layouts with clearer action affordances.</li>
+                  <li>Improved tap targets, spatial grouping, and category structure to enable faster, more confident ordering.</li>
+                </ul>
+                <Link
+                  href="/projects/fengcha"
+                  style={{
+                    ...styles.pill(false),
+                    display: 'inline-block',
+                    marginTop: '1.25rem',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
+                  }}
+                >
+                  View Project →
+                </Link>
+              </div>
+            </div>
             {/* Demon Slayer – Marketing Design (MOST RECENT) */}
             <div style={{ display: 'flex', gap: '2rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
               <div style={{ flex: '1 1 420px' }}>
@@ -331,6 +370,45 @@ export default function Home() {
         {/* UX/UI Projects Tab */}
         {activeTab === 'UX/UI Projects' && (
           <>
+            {/* Feng Cha */}
+            <div style={{ display: 'flex', gap: '2rem', marginTop: '2rem', flexWrap: 'wrap' }}>
+              <div style={{ flex: '1 1 420px' }}>
+                <Image
+                  src="/fengcha/thumbnailwide1.png"
+                  alt="FengCha Project"
+                  width={1300}
+                  height={1021}
+                  style={{ width: '100%', height: 'auto', borderRadius: '1rem' }}
+                />
+              </div>
+              <div style={{ flex: '2 1 520px'}}>
+                <h3 style={styles.calloutH3}>Feng Cha Mobile App: UX Cleanup & Ordering Flow</h3>
+                <p style={styles.meta}>UX/UI Design · Prototyping · Mobile Design · Interaction Design</p>
+                <ul style={styles.list}>
+                  <li>Evaluated the existing ordering flow to identify friction points in visual hierarchy and navigation.</li>
+                  <li>Reworked store list and menu screens into more scannable card layouts with clearer action affordances.</li>
+                  <li>Improved tap targets, spatial grouping, and category structure to enable faster, more confident ordering.</li>
+                </ul>
+                <Link
+                  href="/projects/fengcha"
+                  style={{
+                    ...styles.pill(false),
+                    display: 'inline-block',
+                    marginTop: '1.25rem',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
+                  }}
+                >
+                  View Project →
+                </Link>
+              </div>
+            </div>
             {/* StepSync */}
             <div style={{ display: 'flex', gap: '2rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
               <div style={{ flex: '1 1 420px' }}>

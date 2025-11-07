@@ -40,6 +40,59 @@ export default function ProjectsIndexPage() {
             gap: '2rem',
           }}
         >
+          {/* Feng Cha Project */}
+          <Link href="/projects/fengcha" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div
+              style={{
+                position: 'relative',
+                borderRadius: '1rem',
+                padding: '2rem',
+                background: 'rgba(255,255,255,0.08)',
+                border: '1px solid rgba(255,255,255,0.18)',
+                backdropFilter: 'blur(14px) saturate(160%)',
+                WebkitBackdropFilter: 'blur(14px) saturate(160%)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.25)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1rem',
+                alignItems: 'center',
+                transition: 'all 0.3s ease',
+                transform: 'translateY(0)',
+                cursor: 'pointer',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
+                e.currentTarget.style.boxShadow =
+                  '0 12px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.35)';
+                e.currentTarget.style.transform = 'translateY(-3px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+                e.currentTarget.style.boxShadow =
+                  '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.25)';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              <div style={{ textAlign: 'left', width: '100%' }}>
+                <h2 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 700 }}>
+                Feng Cha App UX Cleanup
+                </h2>
+                <p style={{ color: '#9CA3AF', margin: '0.25rem 0', fontSize: '0.9rem', fontStyle: 'italic' }}>
+                  UI/UX Design · Prototyping · Mobile Design
+                </p>
+                <p style={{ margin: 0, marginBottom: '1rem', fontSize: '0.95rem', lineHeight: 1.6, color: '#E0E0E0' }}>
+                Streamlined the Feng Cha's store and menu selection flow to reduce friction and help users order faster.
+                </p>
+              </div>
+              <Image
+                src="/fengcha/thumbnailwide1.png"
+                alt="Feng Cha UX"
+                width={600}
+                height={600}
+                style={{ width: '100%', height: 'auto', borderRadius: '1rem' }}
+              />
+            </div>
+          </Link>
           {/* Demon Slayer Quiz — Marketing Design */}
           <Link href="/projects/demonslayer" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div
