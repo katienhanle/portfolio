@@ -80,7 +80,7 @@ export default function FengChaCaseStudy() {
 
   return (
     <div style={styles.page}>
-      <Head><title>Feng Cha App — UX Cleanup & Ordering Flow</title></Head>
+      <Head><title>Feng Cha App: UX Cleanup & Ordering Flow</title></Head>
       <GlassNav/>
       <div style={{ height: '5rem' }} />
 

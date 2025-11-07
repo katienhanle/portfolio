@@ -81,7 +81,7 @@ export default function ProjectsIndexPage() {
                   UI/UX Design · Prototyping · Mobile Design
                 </p>
                 <p style={{ margin: 0, marginBottom: '1rem', fontSize: '0.95rem', lineHeight: 1.6, color: '#E0E0E0' }}>
-                Streamlined the Feng Cha's store and menu selection flow to reduce friction and help users order faster.
+                Streamlined the Feng Cha&apos;s store and menu selection flow to reduce friction and help users order faster.
                 </p>
               </div>
               <Image
