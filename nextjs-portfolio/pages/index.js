@@ -44,25 +44,25 @@ export default function Home() {
       paddingBottom: '0.25rem',
     },
     titleH1: {
-      fontSize: '2.2rem',
+      fontSize: '3.4rem',
       fontWeight: 800,
       margin: 0,
     },
     titleH2: {
-      fontSize: '1.4rem',
+      fontSize: '1.6rem',
       fontWeight: 700,
       margin: 0,
       marginBottom: '1.25rem',
     },
     calloutH3: {
-      fontSize: '1.25rem',
+      fontSize: '1.7rem',
       fontWeight: 600,
       marginTop: '1.25rem',
       marginBottom: '0.75rem',
       color: '#E0E0E0',
     },
     body: {
-      fontSize: '0.95rem',
+      fontSize: '1.25rem',
       lineHeight: 1.7,
       color: '#E0E0E0',
       margin: 0,
@@ -80,7 +80,7 @@ export default function Home() {
       lineHeight: 1.7,
       marginTop: '0.5rem',
       color: '#E0E0E0',
-      fontSize: '0.95rem',
+      fontSize: '1.05rem',
     },
     pill: (active) => ({
       padding: '0.5rem 1.1rem',
@@ -116,15 +116,16 @@ export default function Home() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          marginTop: '3.5rem',
+          marginTop: '6rem',
           gap: '2rem',
           flexWrap: 'wrap',
+
         }}
       >
         <div style={{ flex: '1 1 520px', maxWidth: 720 }}>
           <h1 style={styles.titleH1}>Hi, I&apos;m Katie.</h1>
           <p style={styles.body}>
-            Based in the Bay Area, I&apos;m a designer, content creator, and visual storyteller, bringing together UX, entertainment, and branding.
+            I&apos;m a designer, developer, and content creator. I like making things look nice.
           </p>
           <hr style={{ margin: '1.5rem 0 0', borderColor: 'rgba(255, 255, 255, 0.25)' }} />
         </div>
