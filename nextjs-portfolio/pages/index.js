@@ -124,7 +124,7 @@ export default function Home() {
         <div style={{ flex: '1 1 520px', maxWidth: 720 }}>
           <h1 style={styles.titleH1}>Hi, I&apos;m Katie.</h1>
           <p style={styles.body}>
-            Based in the Bay Area, I&apos;m a designer, content creator, and visual storyteller, bringing together UX, entertainment, and branding.
+            Based in the Bay Area, I&apos;m a designer, developer, and content creator, bringing together UX, entertainment, and branding.
           </p>
           <hr style={{ margin: '1.5rem 0 0', borderColor: 'rgba(255, 255, 255, 0.25)' }} />
         </div>
