@@ -62,8 +62,8 @@ export default function About() {
       minHeight: '100vh',
       padding: '2rem',
     },
-    titleH1: { fontSize: '3.4rem', fontWeight: 800, margin: 0 },
-    body: { fontSize: '1.05rem', lineHeight: 1.7, marginTop: '0.75rem' },
+    titleH1: { fontSize: '2.2rem', fontWeight: 800, margin: 0 },
+    body: { fontSize: '0.95rem', lineHeight: 1.7, marginTop: '0.75rem' },
     gridLayout: {
       display: 'grid',
       gridTemplateColumns: '1.2fr 1fr', // text | squares
