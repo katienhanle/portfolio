@@ -27,7 +27,7 @@ export default function ProjectsIndexPage() {
       <div style={{ height: '5rem' }} /> {/* spacer below fixed nav */}
 
       {/* Title */}
-      <h1 style={{ fontSize: '2.2rem', fontWeight: '800', marginTop: '3.5rem' }}>
+      <h1 style={{ fontSize: '3.4rem', fontWeight: '800', marginTop: '3.5rem' }}>
         Projects
       </h1>
 
@@ -74,7 +74,7 @@ export default function ProjectsIndexPage() {
               }}
             >
               <div style={{ textAlign: 'left', width: '100%' }}>
-                <h2 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 700 }}>
+                <h2 style={{ margin: 0, fontSize: '1.6rem', fontWeight: 700 }}>
                 Feng Cha App UX Cleanup
                 </h2>
                 <p style={{ color: '#9CA3AF', margin: '0.25rem 0', fontSize: '0.9rem', fontStyle: 'italic' }}>
@@ -127,7 +127,7 @@ export default function ProjectsIndexPage() {
               }}
             >
               <div style={{ textAlign: 'left', width: '100%' }}>
-                <h2 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 700 }}>
+                <h2 style={{ margin: 0, fontSize: '1.6rem', fontWeight: 700 }}>
                   Demon Slayer Personality Quiz
                 </h2>
                 <p style={{ color: '#9CA3AF', margin: '0.25rem 0', fontSize: '0.9rem', fontStyle: 'italic' }}>
@@ -182,7 +182,7 @@ export default function ProjectsIndexPage() {
           >
 
               <div style={{ textAlign: 'left', width: '100%' }}>
-                <h2 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 700 }}>StepSync</h2>
+                <h2 style={{ margin: 0, fontSize: '1.6rem', fontWeight: 700 }}>StepSync</h2>
                 <p
                   style={{
                     color: '#9CA3AF',
@@ -250,7 +250,7 @@ export default function ProjectsIndexPage() {
           >
 
               <div style={{ textAlign: 'left', width: '100%' }}>
-                <h2 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 700 }}>Career Crush</h2>
+                <h2 style={{ margin: 0, fontSize: '1.6rem', fontWeight: 700 }}>Career Crush</h2>
                 <p
                   style={{
                     color: '#9CA3AF',
@@ -318,7 +318,7 @@ export default function ProjectsIndexPage() {
           >
 
               <div style={{ textAlign: 'left', width: '100%' }}>
-                <h2 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 700 }}>
+                <h2 style={{ margin: 0, fontSize: '1.6rem', fontWeight: 700 }}>
                   iMessage Interface Revamp
                 </h2>
                 <p

@@ -15,9 +15,9 @@ export default function Playground() {
       minHeight: '100vh',
       padding: '2rem 2rem 2rem 3.25rem', // extra left space for glass scrollbar
     },
-    titleH1: { fontSize: '2.2rem', fontWeight: 800, margin: 0 },
-    titleH2: { fontSize: '1.4rem', fontWeight: 700, margin: 0, marginBottom: '1.25rem' },
-    body: { fontSize: '0.95rem', lineHeight: 1.7, color: '#E0E0E0', margin: 0, marginTop: '0.75rem' },
+    titleH1: { fontSize: '3.4rem', fontWeight: 800, margin: 0 },
+    titleH2: { fontSize: '1.6rem', fontWeight: 700, margin: 0, marginBottom: '1.25rem' },
+    body: { fontSize: '1.05rem', lineHeight: 1.7, color: '#E0E0E0', margin: 0, marginTop: '0.75rem' },
     meta: { fontSize: '0.9rem', color: '#9CA3AF', fontStyle: 'italic', margin: '0.25rem 0 0.75rem 0' },
     card: {
       position: 'relative',
